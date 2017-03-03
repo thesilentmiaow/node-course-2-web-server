@@ -48,8 +48,13 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
   // res.send('About page');
   res.render('about.hbs', {
-    pageTitle: 'About Page',
+    pageTitle: 'About Page'
+  });
+});
 
+app.get('/project', (req, res) => {
+  res.render('project.hbs', {
+    pageTitle: 'Project Page'
   });
 });
 
@@ -61,4 +66,5 @@ app.get('/bad', (req,res) => {
 
 app.listen(port, () => {
   console.log(`Server is up on port ${port}`);
+
 });
